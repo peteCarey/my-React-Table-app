@@ -1,0 +1,21 @@
+{
+
+    "records":[
+        {
+        "id":1,
+        "name":"Robbo",
+        "Area": "North",
+        "example": "works hard",
+        "contract": "7 years",
+        "exceptionsReasons": "valuable golfer"
+        },
+         {
+        "id":2,
+        "name":"James",
+        "Area": "East",
+        "example": "clever",
+        "contract": "12 years",
+        "exceptionsReasons": "good decorator"
+        }
+    ]
+}
