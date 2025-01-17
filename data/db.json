@@ -1,21 +1,60 @@
 {
-
-    "records":[
-        {
-        "id":1,
-        "name":"Robbo",
-        "Area": "North",
-        "example": "works hard",
-        "contract": "7 years",
-        "exceptionsReasons": "valuable golfer"
-        },
-         {
-        "id":2,
-        "name":"James",
-        "Area": "East",
-        "example": "clever",
-        "contract": "12 years",
-        "exceptionsReasons": "good decorator"
-        }
-    ]
+  "employees": [
+    {
+      "id": "1",
+      "name": "Robbo",
+      "area": "North",
+      "example": "works hard",
+      "contract": "7 years",
+      "actions": "valuable golfer"
+    },
+    {
+      "id": "2",
+      "name": "James",
+      "area": "East",
+      "example": "clever",
+      "contract": "12 years",
+      "actions": "good decorator"
+    },
+    {
+      "id": "964c",
+      "name": "Mowgli",
+      "area": "Fun",
+      "example": "Jungle Book",
+      "contract": "1970",
+      "actions": "Film"
+    },
+    {
+      "id": "ce3a",
+      "name": "Rodney",
+      "area": "Horses",
+      "example": "Trigg",
+      "contract": "6 weeks",
+      "actions": "good time keeping"
+    },
+    {
+      "id": "6116",
+      "name": "Robbo",
+      "area": "North",
+      "example": "works hard",
+      "contract": "7 years",
+      "actions": "valuable golfee"
+    },
+    {
+      "id": "6231",
+      "name": "Robbo",
+      "area": "North",
+      "example": "works hard",
+      "contract": "7 years",
+      "actions": "valuable at tenis "
+    },
+    {
+      "id": "32bf",
+      "name": "Robbo",
+      "area": "North",
+      "example": "works hard",
+      "contract": "7 years",
+      "actions": "valuable golfer"
+    }
+  ]
 }

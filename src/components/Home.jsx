@@ -1,17 +1,15 @@
-// import { useNavigate } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.min.css";
+import { useNavigate } from "react-router-dom";
 import { Button } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "../index.css";
-import { Navigate } from "react-router-dom";
-
 const title = "How are Records are kept";
 
 const Home = () => {
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
   const goToNextScreen = () => {
-    Navigate("/records");
-  }
-/*
+    navigate("/employee");
+  };
+  /*
   return (
     <div>Home</div>
   );
@@ -46,5 +44,4 @@ const Section = ({ goToNextScreen }) => {
   );
 };
 
-export default Home
-
+export default Home;

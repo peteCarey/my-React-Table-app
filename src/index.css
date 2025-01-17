@@ -36,6 +36,10 @@ body {
     object-fit: scale-down;
 }
 
+.divbtn{
+    float: right;
+}
+
 
 @media screen and (min-width: 768px) {
     p {
