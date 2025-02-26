@@ -18,7 +18,7 @@ const EmpListing = () => {
 
   const Removefunction = (id) => {
     if (window.confirm("Do you want to remove?")) {
-      fetch("http://localhost:8000/employees", +id, {
+      fetch(`http://localhost:8000/employees/${id}`, {
         method: "DELETE",
       })
         .then((res) => {

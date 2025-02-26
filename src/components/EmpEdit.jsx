@@ -4,7 +4,27 @@ import { Button } from "react-bootstrap";
 
 const EmpEdit = () => {
   const { empid } = useParams();
- // const [empdata, empdatachange] = useState({});
+  // const [empdata, empdatachange] = useState({});
+
+  useEffect(() => {
+    fetch("http://localhost:8000/employees/" + empid)
+      .then((res) => {
+        return res.json();
+      })
+      .then((resp) => {
+        idchange(resp.id);
+        namechange(resp.name);
+        areachange(resp.area);
+        examplechange(resp.example);
+        contractchange(resp.contract);
+        actionschange(resp.actions);
+        console.log(resp);
+      })
+      .catch((err) => {
+        console.log(err.message);
+      });
+  }, [empid]);
+
   const [id, idchange] = useState("");
   const [name, namechange] = useState("");
   const [area, areachange] = useState("");
@@ -14,44 +34,29 @@ const EmpEdit = () => {
   const [validation, valchange] = useState(false);
 
   const navigate = useNavigate();
-  // const [empdata, empdatachange] = useState(null);
 
-  useEffect(() => {
-    fetch("http://localhost:8000/employees/" + empid)
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log({ id, name, area, example, contract, actions });
+    const empData = { id, name, area, example, contract, actions };
+
+    fetch(`http://localhost:8000/employees/${empid}`, {
+      method: "PUT",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify(empData),
+    })
       .then((res) => {
-        return res.json();
-      }).then((resp) =>{
-          idchange(resp.id);
-          namechange(resp.name);
-          areachange(resp.area);
-          examplechange(resp.example);
-          contractchange(resp.contract);
-          actionschange(resp.actions);
-          console.log(resp);
+       if (res.ok) {
+         alert("Saved successfully.");
+         navigate("/employee");
+       } else {
+         throw new Error("Failed to save data.");
+       }
       })
       .catch((err) => {
         console.log(err.message);
       });
-  }, [empid]);
-
- const handleSubmit = (e) => {
-   e.preventDefault();
-   console.log({ id, name, area, example, contract, actions });
-   const empData = {id, name, area, example, contract, actions };
-
-   fetch("http://localhost:8000/employees",+empid, {
-     method: "PUT",
-     headers: { "content-type": "application/json" },
-     body: JSON.stringify(empData),
-   })
-     .then((res) => {
-       alert("Saved successfully.");
-       navigate("/employee");
-     })
-     .catch((err) => {
-       console.log(err.message);
-     });
- };
+  };
 
   return (
     <div>

@@ -22,7 +22,7 @@ const [empdata, empdatachange] = useState({});
     <div className="container">
       <div className="card">
         <div className="card-title">
-          <h2>Employee Create</h2>
+          <h2>Employee Details</h2>
         </div>
         <div className="card-body"></div>
         <div>
